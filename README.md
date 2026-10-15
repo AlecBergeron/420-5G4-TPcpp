@@ -1,6 +1,7 @@
+# Pas remis (retard)
+
 Alec Bergeron
 
-***
 
 ## Fonctionnalités
 ### Interface et expérience Utilisateur
@@ -12,7 +13,6 @@ Alec Bergeron
 ### Journal d'activités
 [] Créez un fichier de journal de l’application. Ce fichier est conservé au fur et à mesure des sessions (créez le fichier s’il n’existe pas à la première exécution).
 
------
 
 ## Questions
 ### Question 1 : C++
