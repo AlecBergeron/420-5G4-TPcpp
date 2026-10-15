@@ -134,14 +134,21 @@ int main(int argc, char* argv[]) {
             case 3: { // Search by Title
                 string title = getInput("Entrez le titre à rechercher : ");
                 auto results = library.searchBooksByTitle(title);
-                
+
                 if (results.empty()) {
                     cout << "Aucun livre trouvé avec ce titre.\n";
                 } else {
                     cout << "\n=== RÉSULTATS DE RECHERCHE ===\n";
                     for (size_t i = 0; i < results.size(); ++i) {
+                        string borrowerName;
+                        if (!results[i]->getAvailability()){
+                            User* user = library.findUserById(results[i]->getBorrowerId());
+                            if (user) {
+                                borrowerName = user->getName();
+                            }
+                        }
                         cout << "\nRésultat " << (i + 1) << " :\n";
-                        cout << results[i]->toString() << "\n";
+                        cout << results[i]->toString(borrowerName) << "\n";
                         cout << "-----------------------------\n";
                     }
                 }
@@ -158,8 +165,15 @@ int main(int argc, char* argv[]) {
                 } else {
                     cout << "\n=== RÉSULTATS DE RECHERCHE ===\n";
                     for (size_t i = 0; i < results.size(); ++i) {
+                        string borrowerName;
+                        if (!results[i]->getAvailability()){
+                            User* user = library.findUserById(results[i]->getBorrowerId());
+                            if (user) {
+                                borrowerName = user->getName();
+                            }
+                        }
                         cout << "\nRésultat " << (i + 1) << " :\n";
-                        cout << results[i]->toString() << "\n";
+                        cout << results[i]->toString(borrowerName) << "\n";
                         cout << "-----------------------------\n";
                     }
                 }

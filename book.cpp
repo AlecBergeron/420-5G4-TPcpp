@@ -44,13 +44,13 @@ void Book::returnBook() {
 }
 
 
-string Book::toString() const {
+string Book::toString(const string& borrowerName) const {
     string result = "Titre : " + title + "\n"
     + "Auteur : " + author + "\n"
     + "ISBN : " + isbn + "\n"
     + "Statut : " + (isAvailable ? "Disponible" : "Emprunté");
     if (!isAvailable) {
-        result += "\nEmprunté par : " + borrowerId;
+        result += "\nEmprunté par : " + (borrowerName.empty() ? borrowerId : borrowerName);
     }
 
     return result;
