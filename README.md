@@ -1,5 +1,3 @@
-# Pas remis (retard)
-
 Alec Bergeron
 
 
@@ -8,10 +6,10 @@ Alec Bergeron
 [x] Afficher le nom d'utilisateur plutôt que l’id dans l’affichage des livres.
 
 ### Gestion des Données
-[] Tri des résultats par titre, auteur pour l’affichage (utilisation de la fonction de tri de la STL).
+[x] Tri des résultats par titre, auteur pour l’affichage (utilisation de la fonction de tri de la STL).
 
 ### Journal d'activités
-[] Créez un fichier de journal de l’application. Ce fichier est conservé au fur et à mesure des sessions (créez le fichier s’il n’existe pas à la première exécution).
+[x] Créez un fichier de journal de l’application. Ce fichier est conservé au fur et à mesure des sessions (créez le fichier s’il n’existe pas à la première exécution).
 
 
 ## Questions
